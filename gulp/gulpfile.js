@@ -1,9 +1,11 @@
+'use strict';
+
 //npm install gulp -g (global环境)
 //npm install gulp --save-dev (项目环境)
 //在项目中install需要的gulp插件，一般只压缩的话需要
 //npm install gulp-minify-css gulp-concat gulp-uglify gulp-rename del --save-dev
 //以下require需要的module
-var gulp = require('gulp'),
+const gulp = require('gulp'),
 	minifycss = require('gulp-minify-css'),
 	minifyhtml = require('gulp-minify-html'),
 	concat = require('gulp-concat'),

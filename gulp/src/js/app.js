@@ -1,7 +1,9 @@
+'use strict';
+
 /*window.onload = function() {
-	var mycanvas = document.getElementById("myCanvasTag");
-	var mycontext = mycanvas.getContext('2d');
-	var img=document.getElementById("bgImg");
+	const mycanvas = document.getElementById("myCanvasTag");
+	const mycontext = mycanvas.getContext('2d');
+	let img=document.getElementById("bgImg");
     mycontext.drawImage(img,10,10);
 	img = new Image();
 	img.src = 'img/玛丽场景.png';
@@ -34,7 +36,7 @@ window.onload = function() {}
 
 function ActionJump(obj) {
 	//	alert(123);
-	var rw = document.getElementById('rw');
+	let rw = document.getElementById('rw');
 	console.log(123);
 	rw.style.left = '20px';
 	//	obj.style.left = '10px';
@@ -42,12 +44,12 @@ function ActionJump(obj) {
 
 
 function ActionRight() {
-	var rw = document.getElementById('rw');
-	var rwDYM = document.getElementById('rwDYM');
-	var bgRoom = document.getElementById('bgRoom');
+	let rw = document.getElementById('rw');
+	let rwDYM = document.getElementById('rwDYM');
+	let bgRoom = document.getElementById('bgRoom');
 	//	directX = 1;
 	//	console.log("向前");
-	//	var moveX = 0;
+	//	let moveX = 0;
 	moveX += moveSpeed;
 	rw.style.left = moveX + '%';
 	/*px情况用offsetleft和offsetWidth*/
@@ -68,11 +70,11 @@ function ActionRight() {
 };
 
 function ActionRightDYM() {
-	var rwDYM = document.getElementById('rwDYM');
-	var bgRoom = document.getElementById('bgRoom');
+	let rwDYM = document.getElementById('rwDYM');
+	const bgRoom = document.getElementById('bgRoom');
 	//	directX = 1;
 	//	console.log("向前");
-	//	var moveX = 0;
+	//	const moveX = 0;
 	moveX += moveSpeed;
 	rwDYM.style.left = moveX + '%';
 	/*px情况用offsetleft和offsetWidth*/
@@ -94,11 +96,11 @@ function ActionRightDYM() {
 
 
 function ActionTop() {
-	/*var rw = document.getElementById('rw');
+	/*let rw = document.getElementById('rw');
 	rw.style.transitionProperty = "height";
 	rw.transitionDuration = "2s";*/
-	var rw = document.getElementById('rw');
-	var scoreRoute = rw.style.left;
+	let rw = document.getElementById('rw');
+	let scoreRoute = rw.style.left;
 
 	function rwAtop() {
 		$('#rw').addClass('rwAtop');
@@ -109,7 +111,7 @@ function ActionTop() {
 			$('#rw').addClass('rwAtopMore');
 			setTimeout("$('#rw').removeClass('rwAtopMore')", 100);
 		}
-		//var scoreRoute = rw.offsetLeft;
+		//let scoreRoute = rw.offsetLeft;
 
 	//	if(scoreRoute<)
 	//	$('#rw').removeClass('rwAtop');
@@ -166,8 +168,8 @@ function speedBack() {
 }
 
 function changeStyle() {
-	var rwDYM = document.getElementById('rwDYM');
-	var rw = document.getElementById('rw');
+	let rwDYM = document.getElementById('rwDYM');
+	let rw = document.getElementById('rw');
 	rwDYM.style.display = 'block';
 	rw.style.display = 'none';
 	setTimeout("DYMBack()", 4000);
@@ -175,14 +177,14 @@ function changeStyle() {
 };
 
 function changeStyleBack() {
-	var rwDYM = document.getElementById('rwDYM');
-	var rw = document.getElementById('rw');
+	let rwDYM = document.getElementById('rwDYM');
+	let rw = document.getElementById('rw');
 	rwDYM.style.display = 'none';
 	rw.style.display = 'block';
 	return 1;
 };
 
-//var isDYM = changeStyle();
+//let isDYM = changeStyle();
 
 function DYMDecreaseTime() {
 	if (DYMtime > 15) {
@@ -208,8 +210,8 @@ function DYMBack() {
 
 function dym() {
 	setTimeout("changeStyle()", 1500);
-	var rwDYM = document.getElementById('rwDYM');
-	var rw = document.getElementById('rw');
+	let rwDYM = document.getElementById('rwDYM');
+	let rw = document.getElementById('rw');
 	rwDYM.style.display = 'none';
 	rw.style.display = 'block';
 	DYMtime += 15;
@@ -218,13 +220,13 @@ function dym() {
 
 //dym();
 
-var myApp = angular.module('myAppp', [])
+const myApp = angular.module('myAppp', [])
 myApp.controller('personController', function($scope) {
 	$scope.person = {
 		firstName: "John",
 		lastName: "Doe",
 		fullName: function() {
-			var x = $scope.person;
+			const x = $scope.person;
 			return x.firstName + " " + x.lastName;
 		}
 	};
@@ -243,8 +245,8 @@ myApp.controller('personController', function($scope) {
 
 	$scope.score = function() {
 		if (isDYM) {
-			var rw = document.getElementById('rw');
-			var scoreRoute = rw.style.left;
+			const rw = document.getElementById('rw');
+			const scoreRoute = rw.style.left;
 
 			function rwAtop() {
 				$('#rw').addClass('rwAtop');
