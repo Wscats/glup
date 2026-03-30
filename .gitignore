@@ -1,47 +1,46 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
 
-# Folder config file
-Desktop.ini
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vuepress/dist
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Environment
+.env
+.env.local
+.env.*.local
 
-# Windows shortcuts
-*.lnk
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
 
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# OS
 .DS_Store
-.AppleDouble
-.LSOverride
+Thumbs.db
 
-# Thumbnails
-._*
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+# TypeScript
+*.tsbuildinfo
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Coverage
+coverage/
+.nyc_output/
